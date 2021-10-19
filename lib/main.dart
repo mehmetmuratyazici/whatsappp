@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
 import 'package:whatsappp/screen/first_screen.dart';
+
+import 'package:whatsappp/screen/navigation_bar.dart';
 
 void main() {
   runApp(const MyApp());

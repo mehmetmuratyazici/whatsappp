@@ -10,16 +10,8 @@ class Calls extends StatefulWidget {
 class _ChatsState extends State<Calls> {
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
-       appBar: AppBar(
-          backgroundColor: Colors.red.shade400,
-          centerTitle: true,
-          title: const Text("Calls"),          
-          actions: [],
-       ),
-       body: const Center(
-         
-       ),
+     return Container(
+       
     );
   }
 }
