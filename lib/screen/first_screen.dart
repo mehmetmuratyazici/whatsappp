@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:whatsappp/screen/Settings.dart';
+
 import 'package:whatsappp/screen/w_camera.dart';
 import 'package:whatsappp/screen/w_chats.dart';
+import 'package:whatsappp/screen/w_settings.dart';
 import 'package:whatsappp/screen/w_status.dart';
 import 'package:whatsappp/w_calls.dart';
 
