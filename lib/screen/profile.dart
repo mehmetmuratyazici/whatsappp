@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:whatsappp/screen/w_chats.dart';
+import 'package:whatsappp/screen/w_status.dart';
 
 class Profile extends StatefulWidget {
   const Profile({ Key? key }) : super(key: key);
 
   @override
   _ProfileState createState() => _ProfileState();
+}
+void changeScreen(BuildContext _context, Widget _widget) {
+  Navigator.push(_context, MaterialPageRoute(builder: (_context) => _widget));
 }
 
 class _ProfileState extends State<Profile> {
@@ -52,6 +57,7 @@ class _ProfileState extends State<Profile> {
              Container(
                padding: const EdgeInsets.all(50),
                child: ElevatedButton(onPressed: () {
+                 changeScreen(context, const Status());
                },
                style:ElevatedButton.styleFrom(
                  primary: Colors.green,
