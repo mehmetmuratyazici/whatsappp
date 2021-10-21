@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:whatsappp/screen/navigation_bar.dart';
 import 'package:whatsappp/screen/w_chats.dart';
 import 'package:whatsappp/screen/w_status.dart';
 
@@ -24,7 +25,8 @@ class _ProfileState extends State<Profile> {
           ),),
       ),
        body:Center(
-        child: Column(        
+        child: Column(  
+          mainAxisAlignment: MainAxisAlignment.center,
           children:  [
             Container(
               
@@ -50,14 +52,18 @@ class _ProfileState extends State<Profile> {
          Container(
               padding: const EdgeInsets.all(50),
               child: TextFormField(
+                cursorColor: Colors.grey,
                 decoration: 
-                 const InputDecoration(hintText:"Adınızı Yazın" ),
+                 const InputDecoration(hintText:"Adınızı Yazın",
+                 focusedBorder: OutlineInputBorder(
+                   borderSide: BorderSide(color: Colors.grey)
+                 ) ),
               )
             ),
              Container(
                padding: const EdgeInsets.all(50),
                child: ElevatedButton(onPressed: () {
-                 changeScreen(context, const Status());
+                 changeScreen(context, const NavigationBar());
                },
                style:ElevatedButton.styleFrom(
                  primary: Colors.green,

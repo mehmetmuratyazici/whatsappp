@@ -20,11 +20,13 @@ class _FirstScreenState extends State<FirstScreen> {
   Widget build(BuildContext context) {
     return  Scaffold(
       body:Center(
-        child: Column(        
+        child: Column(  
+          mainAxisAlignment: MainAxisAlignment.center,     
           children:  [
             Container(
+              
               padding: const EdgeInsets.all(20),
-              child: const Text("WhatsApp'a Hoş Geldiniz",
+              child: const Text("WhatsAppp'a Hoş Geldiniz",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 30,
