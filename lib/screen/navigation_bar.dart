@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, avoid_print
+
 import 'package:flutter/material.dart';
 
 import 'package:whatsappp/screen/w_camera.dart';
@@ -6,20 +8,17 @@ import 'package:whatsappp/screen/w_settings.dart';
 import 'package:whatsappp/screen/w_status.dart';
 import 'package:whatsappp/w_calls.dart';
 
-
-
 class NavigationBar extends StatefulWidget {
-  const NavigationBar({ Key? key }) : super(key: key);
-  
+  const NavigationBar({Key? key}) : super(key: key);
+
   @override
-  _FirstScreenState createState() => _FirstScreenState();
+  _NavigationBarState createState() => _NavigationBarState();
 }
 
-class _FirstScreenState extends State<NavigationBar> {
-
+class _NavigationBarState extends State<NavigationBar> {
   void showMessage() {}
   int _selectedIndex = 0;
-  
+
   @override
   Widget build(BuildContext context) {
     void _onItemTapped(int index) {
@@ -29,14 +28,13 @@ class _FirstScreenState extends State<NavigationBar> {
       });
     }
 
-     List<Widget> _pages = <Widget>[
-       const Status(),
-       const Calls(),
-       const Camera(),
-       const Chats(),
-       const Settings(),
-       const Status()
-       
+    List<Widget> _pages = <Widget>[
+      Status(),
+      Calls(),
+      Camera(),
+      Chats(),
+      Settings(),
+      Status()
     ];
 
     final navbar = BottomNavigationBar(
@@ -79,14 +77,12 @@ class _FirstScreenState extends State<NavigationBar> {
             label: 'Settings',
           ),
         ]);
-   return Scaffold(
+    return Scaffold(
       bottomNavigationBar: navbar,
       body: IndexedStack(
         index: _selectedIndex,
         children: _pages,
       ),
     );
-    
   }
-  
 }

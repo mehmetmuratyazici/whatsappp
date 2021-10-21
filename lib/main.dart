@@ -1,9 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:whatsappp/screen/first_screen.dart';
-
-
-import 'package:whatsappp/screen/navigation_bar.dart';
-import 'package:whatsappp/screen/w_chats.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: const FirstScreen(),
+      home: FirstScreen(),
     );
   }
 }
