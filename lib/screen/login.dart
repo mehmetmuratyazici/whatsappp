@@ -1,6 +1,7 @@
+// ignore_for_file: prefer_const_constructors, avoid_print, prefer_final_fields
+
 import 'package:flutter/material.dart';
-import 'package:whatsappp/base/base_utils.dart';
-import 'package:whatsappp/screen/navigation_bar.dart';
+import 'package:flutter/services.dart';
 import 'package:whatsappp/screen/profile.dart';
 
 class Login extends StatefulWidget {
@@ -33,7 +34,7 @@ class _LoginState extends State<Login> {
             ),
           ),
           Container(
-              // key: _formKey,
+              
               padding: const EdgeInsets.all(60),
               child: TextField(
                 controller: _phoneNumberController,
@@ -43,10 +44,16 @@ class _LoginState extends State<Login> {
                   errorText: _isPhoneNumberValid
                       ? "Phone number should be not null !"
                       : null,
+                  
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
+                    
                   ),
                 ),
+                keyboardType: TextInputType.number,
+                inputFormatters: [
+                  FilteringTextInputFormatter.digitsOnly
+                ],
               )),
           Container(
               padding: const EdgeInsets.all(50),

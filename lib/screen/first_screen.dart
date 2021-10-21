@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:whatsappp/screen/login.dart';
-import 'package:whatsappp/screen/navigation_bar.dart';
+
 
 class FirstScreen extends StatefulWidget {
   const FirstScreen({ Key? key }) : super(key: key);

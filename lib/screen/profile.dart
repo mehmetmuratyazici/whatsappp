@@ -1,7 +1,8 @@
+// ignore_for_file: prefer_const_constructors, avoid_print, non_constant_identifier_names, duplicate_ignore
+
 import 'package:flutter/material.dart';
 import 'package:whatsappp/screen/navigation_bar.dart';
-import 'package:whatsappp/screen/w_chats.dart';
-import 'package:whatsappp/screen/w_status.dart';
+
 
 class Profile extends StatefulWidget {
   const Profile({ Key? key }) : super(key: key);
@@ -14,6 +15,10 @@ void changeScreen(BuildContext _context, Widget _widget) {
 }
 
 class _ProfileState extends State<Profile> {
+   bool _isNameValid = false;
+
+  TextEditingController NameController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,18 +57,35 @@ class _ProfileState extends State<Profile> {
          Container(
               padding: const EdgeInsets.all(50),
               child: TextFormField(
+                controller: NameController,
                 cursorColor: Colors.grey,
                 decoration: 
-                 const InputDecoration(hintText:"Adınızı Yazın",
+                  InputDecoration(hintText:"Adınızı Yazın",
+                 errorText:_isNameValid 
+                 ? "Name should be not null !"
+                 :null,
+                 // ignore: prefer_const_constructors
                  focusedBorder: OutlineInputBorder(
                    borderSide: BorderSide(color: Colors.grey)
                  ) ),
+  
+                 
               )
             ),
              Container(
                padding: const EdgeInsets.all(50),
                child: ElevatedButton(onPressed: () {
-                 changeScreen(context, const NavigationBar());
+                 print( NameController.value.isComposingRangeValid);
+                  if (NameController.text != "") {
+                    setState(() {
+                      _isNameValid = false;
+                    });
+                    changeScreen(context, const NavigationBar());
+                  } else {
+                    setState(() {
+                      _isNameValid = true;
+                    });
+                  }
                },
                style:ElevatedButton.styleFrom(
                  primary: Colors.green,
