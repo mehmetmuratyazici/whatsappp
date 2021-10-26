@@ -76,7 +76,8 @@ class _NavigationBarState extends State<NavigationBar> {
             ),
             label: 'Settings',
           ),
-        ]);
+        ]
+        );
     return Scaffold(
       bottomNavigationBar: navbar,
       body: IndexedStack(

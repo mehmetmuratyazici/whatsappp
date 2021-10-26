@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class Status extends StatefulWidget {
@@ -32,13 +34,20 @@ class _StatusState extends State<Status> {
       body: ListView(
         children: [
           const TextField(
+            cursorColor: Colors.grey,
             decoration: InputDecoration(
-              prefixIcon: Icon(Icons.search),
-              border: OutlineInputBorder(),
+              prefixIcon: Icon(Icons.search,
+              color: Colors.grey,),
+              focusedBorder: OutlineInputBorder(
+                 borderSide: BorderSide(color: Colors.grey),
+              ),
               hintText: 'Search',
               isDense: true,
             ),
           ),
+          Card(
+             margin: EdgeInsets.only(top: 10),
+          child:
           ListTile(
               title: const Text("My Status"),
               subtitle: const Text("Add to my status"),
@@ -53,17 +62,21 @@ class _StatusState extends State<Status> {
                 children: [
                   IconButton(
                       onPressed: () {},
-                      icon: const Icon(Icons.camera_alt_rounded),
+                      icon: const Icon(Icons.camera_alt_rounded,
+                      color: Colors.blue,),
                       highlightColor: Colors.transparent,
                       hoverColor: Colors.transparent),
                   IconButton(
                       onPressed: () {},
-                      icon: const Icon(Icons.edit),
+                      icon: const Icon(Icons.edit,
+                      color: Colors.blue,),
                       highlightColor: Colors.transparent,
                       hoverColor: Colors.transparent)
                 ],
               ))
+          )
         ],
+          
       ),
     );
   }

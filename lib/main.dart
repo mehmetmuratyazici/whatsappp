@@ -2,16 +2,24 @@
 
 import 'package:flutter/material.dart';
 import 'package:whatsappp/screen/first_screen.dart';
+import 'package:whatsappp/screen/login.dart';
+import 'package:whatsappp/screen/w_status.dart';
+
+
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+    
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
+
+
   @override
+   
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Whats App\'p',
@@ -29,10 +37,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home: FirstScreen(),
+      home:FirstScreen()
     );
   }
+
 }
+
+
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);

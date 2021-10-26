@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, avoid_print, non_constant_identifier_names, duplicate_ignore
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:whatsappp/screen/navigation_bar.dart';
 
 
@@ -57,6 +58,9 @@ class _ProfileState extends State<Profile> {
          Container(
               padding: const EdgeInsets.all(50),
               child: TextFormField(
+                inputFormatters: [                 
+                  LengthLimitingTextInputFormatter(13),
+                ],
                 controller: NameController,
                 cursorColor: Colors.grey,
                 decoration: 
