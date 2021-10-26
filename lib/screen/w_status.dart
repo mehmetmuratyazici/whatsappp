@@ -15,31 +15,31 @@ class _StatusState extends State<Status> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Status",
-        ),
-        actions: [
-          IconButton(
-            highlightColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            iconSize: 80,
-            alignment: Alignment.topRight,
-            icon: const Text(
-              "Privacy",
+      leading: IconButton(
+          onPressed: () {},
+          // ignore: prefer_const_constructors
+          icon:Text("Privacy",
+          style:TextStyle(
+            color: Colors.blue,
+            fontSize: 11)
             ),
-            onPressed: () {},
-          ),
-        ],
+     ),
       ),
-      body: ListView(
+      body:ListView(
         children: [
+          Text("Status",
+          style: TextStyle(
+            fontSize: 40),
+            ),
           const TextField(
+            
             cursorColor: Colors.grey,
             decoration: InputDecoration(
               prefixIcon: Icon(Icons.search,
               color: Colors.grey,),
               focusedBorder: OutlineInputBorder(
                  borderSide: BorderSide(color: Colors.grey),
+                 borderRadius: BorderRadius.all(Radius.circular(10.0))
               ),
               hintText: 'Search',
               isDense: true,
