@@ -32,11 +32,15 @@ class _SettingsState extends State<Settings> {
                 onPressed: () {},
                 child: const Icon(Icons.person),
               ),
-              trailing: FloatingActionButton(
+              trailing:SizedBox(
+                width: 30,
+                height: 30,
+                child:FloatingActionButton(
                   backgroundColor: Colors.grey,
                   mini: true,
                   onPressed: () {},
-                  child: Icon(Icons.qr_code)),
+                  child: Icon(Icons.qr_code,
+                  size: _iconSize))),
             ),
           ),
           Card(

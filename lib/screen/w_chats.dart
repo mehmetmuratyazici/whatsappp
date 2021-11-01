@@ -1,12 +1,18 @@
 // ignore_for_file: prefer_const_constructors, duplicate_ignore, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:whatsappp/screen/contacts.dart';
 
 class Chats extends StatefulWidget {
   const Chats({ Key? key }) : super(key: key);
 
   @override
   _ChatsState createState() => _ChatsState();
+}
+
+
+void changeScreen(BuildContext _context, Widget _widget) {
+  Navigator.push(_context, MaterialPageRoute(builder: (_context) => _widget));
 }
 
 class _ChatsState extends State<Chats> {
@@ -26,7 +32,10 @@ class _ChatsState extends State<Chats> {
      ),
       actions: [
        IconButton(
-       onPressed: () {},
+       onPressed: () {
+          changeScreen(context, Contacts());
+
+       },
        icon: Icon(Icons.edit_outlined,
        color: Colors.blue,
        )
@@ -52,12 +61,7 @@ class _ChatsState extends State<Chats> {
               isDense: true,
             ),
           ),
-          TextFormField(
-            decoration: InputDecoration(
-             prefixIcon: Text("Toplu Mesaj Listeleri") 
-            ),
-
-          )          
+          
           
         ],
       )

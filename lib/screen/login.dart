@@ -47,6 +47,7 @@ class _LoginState extends State<Login> {
                   
                   focusedBorder: const OutlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey),
+                    borderRadius: BorderRadius.all(Radius.circular(10.0))
                     
                   ),
                 ),

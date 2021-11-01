@@ -70,10 +70,10 @@ class _ProfileState extends State<Profile> {
                  :null,
                  // ignore: prefer_const_constructors
                  focusedBorder: OutlineInputBorder(
-                   borderSide: BorderSide(color: Colors.grey)
-                 ) ),
-  
-                 
+                   borderSide: BorderSide(color: Colors.grey),
+                   borderRadius: BorderRadius.all(Radius.circular(10.0))
+                 )
+                  ),
               )
             ),
              Container(
