@@ -48,7 +48,9 @@ class _ChatsState extends State<Chats> {
           style: TextStyle(
             fontSize: 40),
             ),
-            TextFormField(               
+            Padding(
+            padding: EdgeInsets.only(right: 5,left: 5),
+            child:TextFormField(               
             cursorColor: Colors.grey,
             decoration: InputDecoration(
               prefixIcon: Icon(Icons.search,
@@ -61,6 +63,7 @@ class _ChatsState extends State<Chats> {
               isDense: true,
             ),
           ),
+            )
           
           
         ],

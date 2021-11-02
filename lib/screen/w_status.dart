@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, duplicate_ignore
 
 import 'package:flutter/material.dart';
 
@@ -11,28 +11,33 @@ class Status extends StatefulWidget {
 
 class _StatusState extends State<Status> {
   bool selected = false;
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-      leading: IconButton(
+      leading:IconButton(
           onPressed: () {},
           // ignore: prefer_const_constructors
           icon:Text("Privacy",
           style:TextStyle(
             color: Colors.blue,
-            fontSize: 11)
+            fontSize: 12)
             ),
-     ),
+     ), 
       ),
+       
+      
       body:ListView(
         children: [
           Text("Status",
           style: TextStyle(
             fontSize: 40),
             ),
-          const TextField(
-            
+          Padding(padding: EdgeInsets.only(right: 5,left: 5),
+      
+          child:TextField(
+          
             cursorColor: Colors.grey,
             decoration: InputDecoration(
               prefixIcon: Icon(Icons.search,
@@ -44,6 +49,7 @@ class _StatusState extends State<Status> {
               hintText: 'Search',
               isDense: true,
             ),
+          ),
           ),
           Card(
              margin: EdgeInsets.only(top: 10),
@@ -60,18 +66,35 @@ class _StatusState extends State<Status> {
               trailing: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  IconButton(
+                  SizedBox(                 
+                    height: 30,
+                    child:FloatingActionButton(
+                      heroTag: null,
+                      backgroundColor: Colors.grey.shade700,
                       onPressed: () {},
-                      icon: const Icon(Icons.camera_alt_rounded,
+                      child: const Icon(Icons.camera_alt_rounded,
+                      size: 20,
+                      
                       color: Colors.blue,),
-                      highlightColor: Colors.transparent,
                       hoverColor: Colors.transparent),
-                  IconButton(
+                     ),
+                SizedBox(
+                  width: 50,
+                  height: 30,
+                  child:FloatingActionButton(
+                    heroTag: null,
+                    backgroundColor: Colors.grey.shade700,
                       onPressed: () {},
-                      icon: const Icon(Icons.edit,
-                      color: Colors.blue,),
-                      highlightColor: Colors.transparent,
-                      hoverColor: Colors.transparent)
+                     child: const Icon(Icons.edit,
+                     size: 20,                 
+                      color: Colors.blue),
+                      hoverColor: Colors.transparent),
+                     
+                      
+
+                )
+                
+                  
                 ],
               ))
           )

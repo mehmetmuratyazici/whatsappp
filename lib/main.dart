@@ -1,11 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:whatsappp/provider/people_provider.dart';
 import 'package:whatsappp/screen/first_screen.dart';
-import 'package:whatsappp/screen/login.dart';
-import 'package:whatsappp/screen/w_status.dart';
-
-
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +19,11 @@ class MyApp extends StatelessWidget {
   @override
    
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => PeopleProvider()),
+      ],        
+      child:MaterialApp(
       title: 'Whats App\'p',
       darkTheme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
@@ -38,6 +40,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.green,
       ),
       home:FirstScreen()
+    ),
     );
   }
 
