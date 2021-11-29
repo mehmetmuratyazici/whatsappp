@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:whatsappp/screen/profile.dart';
 
 class Login extends StatefulWidget {
@@ -46,8 +47,8 @@ class _LoginState extends State<Login> {
                       : null,
                   
                   focusedBorder: const OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey),
-                    borderRadius: BorderRadius.all(Radius.circular(10.0))
+                    
+                    
                     
                   ),
                 ),
@@ -60,7 +61,10 @@ class _LoginState extends State<Login> {
           Container(
               padding: const EdgeInsets.all(50),
               child: ElevatedButton(
-                onPressed: () {
+                onPressed: () async {
+                   SharedPreferences prefs =
+                          await SharedPreferences.getInstance();
+                   prefs.setBool("isSignedIn", true);
                   print(_phoneNumberController.value.isComposingRangeValid);
                   if (_phoneNumberController.text != "") {
                     setState(() {

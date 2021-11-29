@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:whatsappp/provider/people_provider.dart';
 import 'package:whatsappp/screen/first_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:whatsappp/screen/navigation_bar.dart';
+import 'package:whatsappp/screen/w_status.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,6 +17,16 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
+    isSignedIn() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    if (prefs.getBool("isSignedIn") == null ||
+        prefs.getBool("isSignedIn") == false) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
 
 
   @override
@@ -39,7 +52,23 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.green,
       ),
-      home:FirstScreen()
+      home:FutureBuilder(
+          future: isSignedIn(),
+          builder: (BuildContext context, AsyncSnapshot snapshot) {
+            if (!snapshot.hasData) {
+              // while data is loading:
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            } else {
+              if (snapshot.data) {
+                return NavigationBar();
+              } else {
+                return FirstScreen(title: '',);
+              }
+            }
+          },
+        ),
     ),
     );
   }

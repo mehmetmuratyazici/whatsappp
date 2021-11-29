@@ -90,11 +90,7 @@ class _StatusState extends State<Status> {
                       color: Colors.blue),
                       hoverColor: Colors.transparent),
                      
-                      
-
                 )
-                
-                  
                 ],
               ))
           )
