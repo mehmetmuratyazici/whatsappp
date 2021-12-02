@@ -41,7 +41,9 @@ class _SettingsState extends State<Settings> {
                   mini: true,
                   onPressed: () {},
                   child: Icon(Icons.qr_code,
-                  size: _iconSize))),
+                  size: _iconSize)
+                  )
+                  ),
             ),
           ),
           Card(

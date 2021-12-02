@@ -33,23 +33,18 @@ class _ContactsState extends State<Contacts> {
       appBar: AppBar(
         title: Text("Yeni Sohbet"),
         centerTitle: true,
-        actions: [
-      
+        actions: [ 
           SizedBox(
            height: 80,
-           width: 80,
-        
+           width: 80,       
            child:IconButton(onPressed: (){
                 changeScreen(context,Chats());
-
            },
            icon:Text("Vazgeç",
            style: TextStyle(
              fontSize:15),
-           )) 
-           
+           ))
           ),
-          
         ],      
       ),
 

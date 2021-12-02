@@ -29,10 +29,11 @@ class _NavigationBarState extends State<NavigationBar> {
     }
 
     List<Widget> _pages = <Widget>[
+      Chats(),
       Status(),
       Calls(),
       Camera(),
-      Chats(),
+      
       Settings(),
       Status()
     ];

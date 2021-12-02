@@ -44,10 +44,12 @@ class _StatusState extends State<Status> {
               color: Colors.grey,),
               focusedBorder: OutlineInputBorder(
                  borderSide: BorderSide(color: Colors.grey),
-                 borderRadius: BorderRadius.all(Radius.circular(10.0))
+                
               ),
+              
               hintText: 'Search',
               isDense: true,
+              border:OutlineInputBorder()
             ),
           ),
           ),

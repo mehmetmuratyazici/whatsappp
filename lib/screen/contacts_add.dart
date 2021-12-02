@@ -72,10 +72,11 @@ class _ContactsAddState extends State<ContactsAdd> {
               child: TextField(
                 controller: nameController,
                 cursorColor: Colors.grey,                
-                decoration: InputDecoration(hintText: "Ad",
-                focusedBorder: OutlineInputBorder(
+                decoration: InputDecoration(hintText: "İsim",
+                focusedBorder: UnderlineInputBorder(
                  borderSide: BorderSide(color: Colors.grey),
               ),
+           
               ),
                 
               ),
@@ -85,10 +86,11 @@ class _ContactsAddState extends State<ContactsAdd> {
               child: TextField(  
                 controller: surnameController,
                 cursorColor: Colors.grey,            
-                decoration: InputDecoration(hintText: "Soyad",
-                focusedBorder: OutlineInputBorder(
+                decoration: InputDecoration(hintText: "Soy İsim",
+                focusedBorder:UnderlineInputBorder(
                  borderSide: BorderSide(color: Colors.grey),
               ),
+               
               ),
               ),
             ),
@@ -98,9 +100,10 @@ class _ContactsAddState extends State<ContactsAdd> {
                 controller: numController,
                 cursorColor: Colors.grey, 
                 decoration: InputDecoration(hintText: "Numara",
-                focusedBorder: OutlineInputBorder(
+                focusedBorder:UnderlineInputBorder(
                  borderSide: BorderSide(color: Colors.grey),
-              ),),
+              ),
+               ),
                 keyboardType: TextInputType.number,
                 inputFormatters: [
                   FilteringTextInputFormatter.digitsOnly,
