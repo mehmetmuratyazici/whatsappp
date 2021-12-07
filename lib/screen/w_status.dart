@@ -34,6 +34,9 @@ class _StatusState extends State<Status> {
           style: TextStyle(
             fontSize: 40),
             ),
+             SizedBox(
+              height: 8,
+            ),
           Padding(padding: EdgeInsets.only(right: 5,left: 5),
       
           child:TextField(

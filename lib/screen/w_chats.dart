@@ -48,6 +48,9 @@ class _ChatsState extends State<Chats> {
           style: TextStyle(
             fontSize: 40),
             ),
+             SizedBox(
+              height: 10,
+            ),
             Padding(
             padding: EdgeInsets.only(right: 5,left: 5),
             child:TextFormField(               

@@ -29,13 +29,12 @@ class _NavigationBarState extends State<NavigationBar> {
     }
 
     List<Widget> _pages = <Widget>[
-      Chats(),
-      Status(),
+      Status(),    
       Calls(),
-      Camera(),
-      
+      Camera(),      
+      Chats(), 
       Settings(),
-      Status()
+      
     ];
 
     final navbar = BottomNavigationBar(
