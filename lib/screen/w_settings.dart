@@ -1,6 +1,7 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, prefer_final_fields
 
 import 'package:flutter/material.dart';
+import 'package:whatsappp/screen/Account.dart';
 
 class Settings extends StatefulWidget {
   const Settings({Key? key}) : super(key: key);
@@ -8,6 +9,12 @@ class Settings extends StatefulWidget {
   @override
   _SettingsState createState() => _SettingsState();
 }
+
+
+void changeScreen(BuildContext _context, Widget _widget) {
+  Navigator.push(_context, MaterialPageRoute(builder: (_context) => _widget));
+}
+
 
 class _SettingsState extends State<Settings> {
   double _iconSize = 20;
@@ -44,10 +51,11 @@ class _SettingsState extends State<Settings> {
                   size: _iconSize)
                   )
                   ),
+                  
             ),
           ),
           Card(
-              margin: EdgeInsets.only(top: 10),
+              margin: EdgeInsets.only(top:5),
               child: ListTile(
                 title: Text("Yıldızlı Mesajlar "),
                 leading: SizedBox(
@@ -64,15 +72,13 @@ class _SettingsState extends State<Settings> {
                       child: const Icon(Icons.star_border_purple500_rounded,
                           color: Colors.white),
                     )),
+                    onTap: (){},
                 trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
+                   Icon(
                         Icons.arrow_forward_ios_rounded,
                         size: _iconSize,
                       ),
-                      highlightColor: Colors.transparent,
-                      hoverColor: Colors.transparent),
+                     
                 ]),
               )),
           Card(
@@ -97,15 +103,13 @@ class _SettingsState extends State<Settings> {
                     ),
                   ),
                 ),
+                onTap: (){},
                 trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
+                    Icon(
                         Icons.arrow_forward_ios_rounded,
                         size: _iconSize,
                       ),
-                      highlightColor: Colors.transparent,
-                      hoverColor: Colors.transparent),
+                  
                 ]),
               )),
           Card(
@@ -130,12 +134,12 @@ class _SettingsState extends State<Settings> {
                     ),
                   ),
                 ),
+                onTap: (){
+                  changeScreen(context,Acoount());
+                },
                 trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward_ios_rounded),
-                      highlightColor: Colors.transparent,
-                      hoverColor: Colors.transparent),
+                 Icon(Icons.arrow_forward_ios_rounded),
+                    
                 ]),
               )),
           Card(
@@ -159,15 +163,13 @@ class _SettingsState extends State<Settings> {
                         size: _iconSize,
                       ),
                     )),
+                    onTap: (){},
                 trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
+                     Icon(
                         Icons.arrow_forward_ios_rounded,
                         size: _iconSize,
                       ),
-                      highlightColor: Colors.transparent,
-                      hoverColor: Colors.transparent),
+                 
                 ]),
               )),
           Card(
@@ -191,12 +193,10 @@ class _SettingsState extends State<Settings> {
                         size: _iconSize,
                       ),
                     )),
+                    onTap: (){},
                 trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward_ios_rounded),
-                      highlightColor: Colors.transparent,
-                      hoverColor: Colors.transparent),
+                   Icon(Icons.arrow_forward_ios_rounded),
+                    
                 ]),
               )),
           Card(
@@ -220,15 +220,14 @@ class _SettingsState extends State<Settings> {
                         size: _iconSize,
                       ),
                     )),
+                    onTap: (){},
                 trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
+             
+                      Icon(
                         Icons.arrow_forward_ios_rounded,
                         size: _iconSize,
                       ),
-                      highlightColor: Colors.transparent,
-                      hoverColor: Colors.transparent),
+                     
                 ]),
               )),
           Card(
@@ -252,12 +251,11 @@ class _SettingsState extends State<Settings> {
                         size: _iconSize,
                       ),
                     )),
+                    onTap: (){},
                 trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(Icons.arrow_forward_ios_rounded),
-                      highlightColor: Colors.transparent,
-                      hoverColor: Colors.transparent),
+                  
+                      Icon(Icons.arrow_forward_ios_rounded),
+                     
                 ]),
               )),
           Card(
@@ -281,15 +279,14 @@ class _SettingsState extends State<Settings> {
                         size: _iconSize,
                       ),
                     )),
+                    
                 trailing: Row(mainAxisSize: MainAxisSize.min, children: [
-                  IconButton(
-                      onPressed: () {},
-                      icon: Icon(
+                  
+                       Icon(
                         Icons.arrow_forward_ios_rounded,
                         size: _iconSize,
                       ),
-                      highlightColor: Colors.transparent,
-                      hoverColor: Colors.transparent),
+                     
                 ]),
               ))
         ],

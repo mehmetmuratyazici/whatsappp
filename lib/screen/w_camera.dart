@@ -1,6 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:whatsappp/provider/people_provider.dart';
 
 
 class Camera extends StatefulWidget {

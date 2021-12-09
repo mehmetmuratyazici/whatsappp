@@ -6,8 +6,6 @@ import 'package:whatsappp/provider/people_provider.dart';
 import 'package:whatsappp/screen/first_screen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:whatsappp/screen/navigation_bar.dart';
-import 'package:whatsappp/screen/w_chats.dart';
-import 'package:whatsappp/screen/w_status.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,8 +25,6 @@ class MyApp extends StatelessWidget {
       return true;
     }
   }
-
-
 
   @override
    

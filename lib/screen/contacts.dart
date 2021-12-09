@@ -20,6 +20,8 @@ void changeScreen(BuildContext _context, Widget _widget) {
 
 
 class _ContactsState extends State<Contacts> {
+  get index => null;
+
 
     initState() {
     Provider.of<PeopleProvider>(context, listen: false).getContact();
@@ -48,7 +50,7 @@ class _ContactsState extends State<Contacts> {
         ],      
       ),
 
-       body: ListView(
+       body:ListView(
          children: [        
             ListTile(
                title: const Text("Yeni Grup",
@@ -81,19 +83,36 @@ class _ContactsState extends State<Contacts> {
                  child:FloatingActionButton(
                  heroTag: null,
                  backgroundColor: Colors.grey.shade700,
-                onPressed: () {
-                   changeScreen(context,ContactsAdd());
-                 },
+                onPressed: () {},
                  child: const Icon(Icons.person_add_alt_1,
                  color: Colors.blue,
                  size: 25,),
               ), 
-               ) 
                ),
+               onTap: (){
+                    changeScreen(context,ContactsAdd());
+               },
+               ),
+               Card(
+                 child: ListView.builder(
+                    itemCount: peopleProvider.nameList!.length,
+                   itemBuilder:(BuildContext context,int index){
+                     return Padding(
+                       padding: EdgeInsets.all(8)
+                       );
+
+                   }
+                  
+                   )
+               )
+
+            
+             
                
          ]
-       )
+       ),
       );
+
     
   }
 }

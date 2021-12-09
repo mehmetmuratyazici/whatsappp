@@ -38,6 +38,7 @@ class _NavigationBarState extends State<NavigationBar> {
     ];
 
     final navbar = BottomNavigationBar(
+   
         currentIndex: _selectedIndex, //New
         onTap: _onItemTapped,
         items: const <BottomNavigationBarItem>[

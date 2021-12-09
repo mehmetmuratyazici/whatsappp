@@ -66,7 +66,22 @@ class _ChatsState extends State<Chats> {
               border: OutlineInputBorder()
             ),
           ),
-            )
+            ),
+          ListTile(
+            leading:Text("Toplu Mesaj Listeleri"),
+            trailing:Text("Yeni Grup"),
+                 
+                    ),
+          Card(
+            child:ListTile(
+              leading: Icon(Icons.check_box),
+              title: Text("Arşivlenmiş"),
+              onTap: (){},
+
+            )        
+                    )      
+      
+           
           
           
         ],
